@@ -370,6 +370,10 @@ header {
   display: -ms-flexbox;
   display: flex;
   gap: 2rem;
+  cursor: pointer;
+}
+.footer__bottom-right img:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 1140px) {

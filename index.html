@@ -45,38 +45,42 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header>
-      <div class="header">
-        <button class="menu-btn" aria-label="Open Menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div class="logo">Suntech Việt Nam</div>
-        <nav class="menu">
-          <div class="drawer">
-            <button class="close-btn" aria-label="Close Menu"></button>
-            <a href="#">Home</a>
-            <a href="#">Women</a>
-            <a href="#">Men</a>
-            <a href="#">Kids</a>
-            <a href="#">Jewellery</a>
-            <a href="#">Accessories</a>
-          </div>
-          <div class="blank"></div>
-        </nav>
-        <div class="header-list">
-          <ul class="icon-list">
-            <li class="icon-items">
-              <img src="./assets/img/Header/cart.png" alt="cart-header" />
-            </li>
-            <li class="icon-items">
-              <img src="./assets/img/Header/glass.png" alt="glass-header" />
-            </li>
-            <li class="icon-items">
-              <img src="./assets/img/Header/bar.png" alt="bar-header" />
-            </li>
-          </ul>
+    <header class="header">
+      <nav>
+        <div class="header__logo">
+          <h1>Suntech Việt Nam</h1>
         </div>
-      </div>
+        <ul class="header__menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Kids</a></li>
+          <li><a href="#">Jwellery</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+        <div class="header__list">
+          <div class="header__list-items">
+            <img src="./assets/img/Header/cart.png" alt="cart-header" />
+          </div>
+          <div class="header__list-items">
+            <img src="./assets/img/Header/glass.png" alt="glass-header" />
+          </div>
+          <div class="header__list-items">
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon"
+              ><img src="./assets/img/Header/bar.png" alt="bar-header"
+            /></label>
+            <ul class="header__menu d-lg-none">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Kids</a></li>
+              <li><a href="#">Jwellery</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <!-- BANNER -->
     <div class="content">
@@ -248,36 +252,52 @@
 
     <!-- FOOTER -->
     <div class="footer">
-      <div class="footer__left">
-        <h2>Get Out Special Discount</h2>
-        <p>
-          Donec eu tristique felis. Duis augue mi, auctor ut purus et, dignissim
-          aliquet quam.</p>
-          <p>register your email for news and special offers</p>
-        <div class="footer__left-contact">
-          <input type="text" placeholder="E-mail address ..." />
-          <button class="btn">Get Coupon Now</button>
-        </div>
-      </div>
-      <div class="footer__right">
-        <img src="./assets/img/Footer/brand-logo-1.png" alt="logo1" />
-        <img src="./assets/img/Footer/brand-logo-2.png" alt="logo2" />
-        <img src="./assets/img/Footer/brand-logo-3.png" alt="logo3" />
-        <img src="./assets/img/Footer/brand-logo-4.png" alt="logo4" />
+        <div class="row">
+          <div class="col col-12 col-lg-6">
+            <div class="footer__left">
+              <h2>Get Out Special Discount</h2>
+              <p>
+                Donec eu tristique felis. Duis augue mi, auctor ut purus et, dignissim
+                aliquet quam.
+              </p>
+              <p>register your email for news and special offers</p>
+              <div class="footer__left-contact">
+                <input type="text" placeholder="E-mail address ..." />
+                <button class="btn">Get Coupon Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-lg-6">
+            <div class="footer__right">
+              <img src="./assets/img/Footer/brand-logo-1.png" alt="logo1" />
+              <img src="./assets/img/Footer/brand-logo-2.png" alt="logo2" />
+              <img src="./assets/img/Footer/brand-logo-3.png" alt="logo3" />
+              <img src="./assets/img/Footer/brand-logo-4.png" alt="logo4" />
+            </div>
+          </div>
       </div>
     </div>
+
     <div class="footer__bottom">
-      <div class="footer__bottom-left">
-        <p>
-          Copyright 2023 RenoshopBee all right reserved - Design by Quang Vinh
-        </p>
-      </div>
-      <div class="footer__bottom-right">
-        <img src="./assets/img/Footer/visa.png" alt="visa" />
-        <img src="./assets/img/Footer/paypal.png" alt="paypal" />
-        <img src="./assets/img/Footer/amazon.png" alt="amazon" />
-        <img src="./assets/img/Footer/maestro.png" alt="maestro" />
-        <img src="./assets/img/Footer/amex.png" alt="amex" />
+      <div class="container">
+        <div class="row">
+          <div class="col col-12 col-lg-6">
+            <div class="footer__bottom-left">
+              <p>
+                Copyright 2023 RenoshopBee all right reserved - Design by Quang Vinh
+              </p>
+            </div>
+          </div>
+          <div class="col col-12 col-lg-6">
+            <div class="footer__bottom-right">
+              <img src="./assets/img/Footer/visa.png" alt="visa" />
+              <img src="./assets/img/Footer/paypal.png" alt="paypal" />
+              <img src="./assets/img/Footer/amazon.png" alt="amazon" />
+              <img src="./assets/img/Footer/maestro.png" alt="maestro" />
+              <img src="./assets/img/Footer/amex.png" alt="amex" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

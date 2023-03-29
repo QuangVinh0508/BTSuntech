@@ -123,16 +123,24 @@ header {
 
 // PRODUCT
 .product {
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(6, 1fr);
     gap: 3rem;
     width: 90%;
     margin: 0 auto;
     margin-top: 8rem;
+    &__container {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        justify-items: stretch;
+        align-items: stretch;
+        gap: 2rem;
+    }
     &__content {
-        grid-column: 1 / span 2;
         h2 {
             font-size: 3rem;
             font-weight: bold;
@@ -154,6 +162,7 @@ header {
     &__items {
         position: relative;
         img {
+            width: 100%;
             cursor: pointer;
         }
         &:hover &-hover {
@@ -216,16 +225,9 @@ header {
 
 // FEATURED
 .feature {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 3rem;
-    width: 90%;
-    margin: 0 auto;
     &__title {
-        margin-top: 5rem;
-        margin-bottom: 0;
+        margin: 5rem 0;
         text-align: center;
-        grid-column: 1 / span 5;
         h2 {
             color: #333333;
             font-size: 3rem;
@@ -237,6 +239,17 @@ header {
             font-size: 1.4rem;
             font-style: italic;
         }
+    }
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(20rem, 1fr));
+        grid-template-rows: repeat(1, 55rem);
+
+        justify-items: stretch;
+        align-items: stretch;
+        gap: 3rem;
     }
     &__items {
         h3 {
@@ -325,20 +338,57 @@ header {
 }
 
 // RESPONSIVE
-@media only screen and (max-width: 1800px) {
+@media only screen and (max-width: 1500px) {
+    //PRODUCT
+    .product {
+        display: block;
+        &__content {
+            text-align: center;
+            margin: 5rem 0;
+        }
+        &__container {
+            width: 100%;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            justify-items: stretch;
+            align-items: stretch;
+            gap: 2rem;
+        }
+        &__items {
+            
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-left: 1rem;
+                padding: 2rem 0;
+                width: 10rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            &-hover {
+                width: 15%;
+            }
+        }
+    }
+
     //FEATURE
     .feature {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 3rem;
-        width: 90%;
-        margin: 0 auto;
+        &__container {
+            width: 90%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            justify-items: stretch;
+            align-items: stretch;
+            gap: 2rem;
+        }
         &__items {
-            img {
-                width: 90%;
-            }
             h3 {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
                 font-weight: 700;
                 margin-left: 1rem;
                 padding: 2rem 0;
@@ -350,41 +400,6 @@ header {
             p {
                 font-style: 1.3rem;
             }
-        }
-    }
-}
-
-@media only screen and (max-width: 1500px) {
-    //PRODUCT
-    .product {
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
-        width: 70%;
-        margin: 0 auto;
-        &__items {
-            img {
-                width: 90%;
-            }
-            h3 {
-                font-size: 1.2rem;
-                font-weight: 700;
-                margin-left: 1rem;
-                padding: 2rem 0;
-                width: 10rem;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            &-hover {
-                width: 20%;
-            }
-        }
-        &__content {
-            grid-column: 1 / span 4;
-            margin-top: 3rem;
         }
     }
 }
@@ -419,32 +434,29 @@ header {
 
     //PRODUCT
     .product {
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 3rem;
-        width: 70%;
-        margin: 0 auto;
-        &__items {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    //FEATURE
+    .feature {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    //FOOTER
+    .footer {
+        &__right {
             img {
-                width: 90%;
-            }
-            h3 {
-                font-size: 1.2rem;
-            }
-            &-hover {
                 width: 20%;
             }
         }
-        &__content {
-            grid-column: 1 / span 4;
-            margin-top: 3rem;
-        }
     }
-    //FOOTER
     .footer__bottom {
-        &-left, &-right {
+        &-left,
+        &-right {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -467,5 +479,13 @@ header {
     //BANNER
     .content__title {
         font-size: 2.5rem;
+    }
+    //FEATURE
+    .feature {
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+        }
     }
 }

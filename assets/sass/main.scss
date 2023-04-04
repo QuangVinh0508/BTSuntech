@@ -246,9 +246,8 @@ header {
     &__container {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-
-        justify-items: stretch;
-        align-items: stretch;
+        
+        padding-right: 0;
         gap: 3rem;
     }
     &__items {
@@ -297,6 +296,9 @@ header {
         &-contact {
             margin-top: 3rem;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
             input {
                 padding: 1rem 10rem 1rem 1rem;
             }
@@ -363,7 +365,6 @@ header {
             gap: 2rem;
         }
         &__items {
-            
             h3 {
                 font-size: 1.5rem;
                 font-weight: 700;

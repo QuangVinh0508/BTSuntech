@@ -263,10 +263,7 @@ header {
 .feature__container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  justify-items: stretch;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  padding-right: 0;
   gap: 3rem;
 }
 .feature__items img {
@@ -324,6 +321,12 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
 }
 .footer__left-contact input {
   padding: 1rem 10rem 1rem 1rem;

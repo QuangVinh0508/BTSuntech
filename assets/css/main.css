@@ -238,10 +238,8 @@ header {
   color: #888888;
 }
 
-.fashion .row {
-  margin-right: 0;
-}
 .fashion img {
+  display: block;
   width: 100%;
 }
 
@@ -263,7 +261,7 @@ header {
 .feature__container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  padding-right: 0;
+  padding: 0;
   gap: 3rem;
 }
 .feature__items img {
